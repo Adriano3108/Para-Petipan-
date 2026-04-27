@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Petipan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="stars-container"></div>
+
+    <div class="container">
+        <h1 id="titulo">¡Feliz mes, mi Petipan! 💙</h1>
+        
+        <div class="galeria">
+            <img src="foto1.jpg.JPEG" alt="Foto 1" class="foto">
+            <img src="foto2.jpg.JPEG" alt="Foto 2" class="foto">
+        </div>
+
+        <div class="carta">
+            <div class="sobre">Toca la carta 💌</div>
+            <div class="contenido-carta">Eres mi persona favorita en el mundo entero, gracias por cada momento. 💙</div>
+        </div>
+
+        <p>Mi petipan hermosa, cumplimos un mes más juntos jj cada día a tu lado me enamoro más. ¡Te amo!</p>
+        
+        <div id="contador-seccion">
+            <h2 id="tiempo">Calculando tiempo...</h2>
+        </div>
+
+        <button id="btn-principal" onclick="mostrarSorpresa()">Haz clic para ver 🐈‍⬛</button>
+        
+        <p id="mensaje-oculto" class="hidden"></p>
+
+        <div id="pregunta-amor" class="hidden">
+            <p>¿Me quieres mucho? 🥺</p>
+            <div class="botones-container">
+                <button id="btn-si" onclick="amorConfirmado()">YES YES YES 💙</button>
+                <button id="btn-no" onmouseover="moverBotonNo(this)" onclick="moverBotonNo(this)">NO 😿</button>
+            </div>
+        </div>
+        
+        <div id="razones-contenedor">
+            <p id="texto-razon"></p>
+        </div>
+
+        <audio id="musica" loop>
+            <source src="cancion1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

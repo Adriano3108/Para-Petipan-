@@ -1,0 +1,97 @@
+body {
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(214, 51, 132, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+h1 { color: #d63384; font-size: 1.5rem; }
+
+.galeria { display: flex; gap: 10px; justify-content: center; margin: 15px 0; }
+.foto { width: 90px; height: 90px; object-fit: cover; border-radius: 12px; border: 3px solid #d63384; transition: 0.3s; }
+.foto:hover { transform: scale(1.1); }
+
+.carta {
+    margin: 15px auto;
+    padding: 12px;
+    border: 2px dashed #d63384;
+    border-radius: 12px;
+    background-color: #fffafb;
+    cursor: pointer;
+}
+.contenido-carta { display: none; font-style: italic; color: #d63384; font-size: 0.85rem; }
+.carta:hover .contenido-carta { display: block; }
+.carta:hover .sobre { display: none; }
+
+#tiempo { color: #d63384; background: #fff0f5; padding: 8px; border-radius: 8px; display: inline-block; font-weight: bold; margin-bottom: 10px; }
+
+button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Arreglo de botones SI y NO */
+.botones-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 50px;
+}
+
+#btn-si { background-color: #2ecc71; z-index: 5; }
+#btn-no { 
+    background-color: #95a5a6; 
+    z-index: 1000; 
+    position: relative; /* Empieza en su sitio */
+}
+
+#mensaje-oculto { display: block; margin-top: 15px; font-weight: bold; color: #d63384; }
+#texto-razon { margin-top: 15px; font-size: 1rem; color: #0047ab; font-weight: bold; }
+.hidden { display: none; }
