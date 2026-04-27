@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi Petipan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://fav.farm/💙" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+    <div id="loader">
+        <div class="heart-loader">💙</div>
+        <p>Preparando algo especial para mi Petipan...</p>
+    </div>
+
     <div id="stars-container"></div>
 
     <div class="container">
@@ -18,15 +24,24 @@
             <img src="foto2.jpg.JPEG" alt="Foto 2" class="foto">
         </div>
 
-        <div class="carta">
-            <div class="sobre">Toca la carta 💌</div>
-            <div class="contenido-carta">Eres mi persona favorita en el mundo entero, gracias por cada momento. 💙</div>
+        <div class="music-waves" id="waves">
+            <span></span><span></span><span></span><span></span><span></span>
         </div>
 
-        <p>Mi petipan hermosa, cumplimos un mes más juntos jj cada día a tu lado me enamoro más. ¡Te amo!</p>
+        <div class="carta">
+            <div class="sobre">Toca la carta 💌</div>
+            <div class="contenido-carta">Eres y serás por siempre mi petipan favorito, gracias por cada momento que vivimos juntos 💙</div>
+        </div>
+
+        <p>Mi petipan hermosa, cumplimos un mes más juntos jj cada día a tu lado me enamoro más. Te amoooooooooo!</p>
         
         <div id="contador-seccion">
             <h2 id="tiempo">Calculando tiempo...</h2>
+        </div>
+
+        <div class="proxima-cita">
+            <p> Nuestro próximo 28 es en 😼:</p>
+            <span id="countdown-cita">Calculando...</span>
         </div>
 
         <button id="btn-principal" onclick="mostrarSorpresa()">Haz clic para ver 🐈‍⬛</button>
@@ -34,7 +49,7 @@
         <p id="mensaje-oculto" class="hidden"></p>
 
         <div id="pregunta-amor" class="hidden">
-            <p>¿Me quieres mucho? 🥺</p>
+            <p>¿Me amas mucho? 😿</p>
             <div class="botones-container">
                 <button id="btn-si" onclick="amorConfirmado()">YES YES YES 💙</button>
                 <button id="btn-no" onmouseover="moverBotonNo(this)" onclick="moverBotonNo(this)">NO 😿</button>

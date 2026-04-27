@@ -11,6 +11,30 @@ body {
     box-sizing: border-box;
 }
 
+/* 1. ESTILOS DEL LOADER (PANTALLA DE CARGA) */
+#loader {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #090A0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+    transition: opacity 1s ease;
+}
+.heart-loader {
+    font-size: 60px;
+    animation: heartbeat 1.2s infinite;
+    margin-bottom: 15px;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+}
+
 #stars-container {
     position: fixed;
     top: 0;
@@ -46,6 +70,28 @@ body {
 
 h1 { color: #d63384; font-size: 1.5rem; }
 
+/* 3. ESTILOS DE LAS ONDAS DE MÚSICA */
+.music-waves {
+    display: none; /* Se activa por JS */
+    justify-content: center;
+    align-items: flex-end;
+    height: 30px;
+    gap: 4px;
+    margin: 15px 0;
+}
+.music-waves span {
+    width: 5px;
+    background: #d63384;
+    animation: wave 0.5s infinite alternate;
+}
+@keyframes wave {
+    from { height: 5px; }
+    to { height: 25px; }
+}
+.music-waves span:nth-child(2) { animation-delay: 0.1s; }
+.music-waves span:nth-child(3) { animation-delay: 0.2s; }
+.music-waves span:nth-child(4) { animation-delay: 0.3s; }
+
 .galeria { display: flex; gap: 10px; justify-content: center; margin: 15px 0; }
 .foto { width: 90px; height: 90px; object-fit: cover; border-radius: 12px; border: 3px solid #d63384; transition: 0.3s; }
 .foto:hover { transform: scale(1.1); }
@@ -64,6 +110,24 @@ h1 { color: #d63384; font-size: 1.5rem; }
 
 #tiempo { color: #d63384; background: #fff0f5; padding: 8px; border-radius: 8px; display: inline-block; font-weight: bold; margin-bottom: 10px; }
 
+/* 4. ESTILOS DE LA CUENTA REGRESIVA MENSUAL */
+.proxima-cita {
+    background: #e1f5fe;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 5px solid #0047ab;
+    font-size: 0.9rem;
+    color: #333;
+}
+#countdown-cita {
+    font-weight: bold;
+    color: #0047ab;
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
 button {
     background-color: #d63384;
     color: white;
@@ -75,7 +139,6 @@ button {
     transition: 0.3s;
 }
 
-/* Arreglo de botones SI y NO */
 .botones-container {
     margin-top: 20px;
     display: flex;
@@ -89,7 +152,7 @@ button {
 #btn-no { 
     background-color: #95a5a6; 
     z-index: 1000; 
-    position: relative; /* Empieza en su sitio */
+    position: relative; 
 }
 
 #mensaje-oculto { display: block; margin-top: 15px; font-weight: bold; color: #d63384; }
